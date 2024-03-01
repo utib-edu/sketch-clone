@@ -1,0 +1,18 @@
+.first-section {
+    background-image: url('/assets/static/media/main-visual.28030b50.jpg') !important;
+    position: relative;
+    width: 100%;
+    background: center bottom 10% / cover no-repeat;
+}
+
+@media (max-width: 800px) {
+    .first-section {
+        padding-top: 72%;
+    }
+}
+
+@media (min-width: calc(801px)) {
+    .first-section {
+        height: calc(-40.1375px + 100vh);
+    }
+}

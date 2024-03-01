@@ -1,0 +1,25 @@
+@media (max-width: 800px) {
+    .section-utib-numbers {
+        gap: 32px !important;
+        padding: calc(101.8px) 0px calc(118.8px) !important;
+
+        .section-numbers-panel-wrapper {
+            padding: 0 !important;
+            justify-items: center !important;
+            gap: 32px !important;
+            grid-template-columns: none !important;
+
+            .number-panel {
+                max-width: 480px !important;
+                padding: 40px 12px !important;
+            }
+
+            .number-panel::before {
+                top: 8px !important;
+                left: 8px !important;
+                width: calc(100% - 16px) !important;
+                height: calc(100% - 16px) !important;
+            }
+        }
+    }
+}

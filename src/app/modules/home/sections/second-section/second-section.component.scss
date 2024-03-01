@@ -1,0 +1,447 @@
+.second-section {
+    position: relative;
+
+    .section-about-bg {
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        width: 2000px;
+        transform: translate(-50%, -50%);
+    }
+
+    .section-about-bg-sp {
+        display: none;
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        width: 165%;
+        transform: translate(-50%, -50%);
+    }
+
+    .section-about-ballon {
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        width: 1700px;
+        transform: translate(-50%, 10%);
+    }
+
+    .section-about-ballon::before {
+        content: "";
+        display: block;
+        padding-top: 37%;
+        background: url('/assets/static/images/about/ballon.svg') center center / contain no-repeat;
+    }
+
+    .section-about-scroll-icon {
+        display: grid;
+        gap: 4px;
+        justify-items: center;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        width: 52px;
+        transform: translate(-50%, -150%);
+        cursor: pointer;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        img:last-of-type {
+            width: 90%;
+            animation: 1.8s ease-out 0s infinite normal none running scroll_animation;
+        }
+    }
+
+    .section-about-inner {
+        position: relative;
+        display: grid;
+        gap: 18px;
+        justify-items: center;
+        padding: 60px 0px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+
+        .section-logo {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 544px;
+            transform: translate(0px, 0px);
+            display: block;
+
+            .section-logo-decoration {
+                opacity: 0;
+                //animation: 0.55s ease-out 1.9s 1 normal both running decoration_animation;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background: url('/assets/static/images/logo/decoration.png') center center / contain no-repeat;
+            }
+        }
+
+        .section-logo::before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        .section-logo-sp {
+            display: none;
+        }
+
+        .section-logo-utib {
+            opacity: 0;
+            //
+            position: absolute;
+            top: 10.84%;
+            left: 22.79%;
+            width: 52.2%;
+            overflow: hidden;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .section-logo-utib::after {
+            opacity: 0;
+            //animation: 0.72s cubic-bezier(0, -0.01, 0.32, 0.99) 0.2s 1 normal both running logo_utib_animation;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: -10%;
+            width: 120%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .section-logo-number-svg {
+            position: absolute;
+            top: 21.69%;
+            left: 29.96%;
+            width: 38.6%;
+            fill: none;
+            stroke: rgb(255, 255, 255);
+            stroke-width: 174;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+
+            .section-logo-number-polyline {
+                opacity: 0;
+                //animation: 0.8s cubic-bezier(0.62, -0.01, 0.32, 0.99) 0.6s 1 normal both running logo_number_polyline;
+            }
+        }
+
+        .section-logo-th {
+            position: absolute;
+            bottom: 21.5%;
+            right: 22.97%;
+            width: 20.22%;
+            fill: none;
+            stroke: rgb(255, 255, 255);
+            stroke-linecap: round;
+            stroke-linejoin: round;
+
+            .section-logo-th-polyline:nth-of-type(1) {
+                opacity: 0;
+                //animation: 0.3s cubic-bezier(0, -0.01, 0.32, 0.99) 1s 1 normal both running logo_th_animation_1;
+                stroke-width: 40;
+            }
+
+            .section-logo-th-polyline:nth-of-type(2) {
+                opacity: 0;
+                //animation: 0.3s cubic-bezier(0, -0.01, 0.32, 0.99) 1.1s 1 normal both running logo_th_animation_2;
+                stroke-width: 42;
+            }
+
+            .section-logo-th-polyline:nth-of-type(3) {
+                opacity: 0;
+                //animation: 0.45s cubic-bezier(0, -0.01, 0.32, 0.99) 1.3s 1 normal both running logo_th_animation_3;
+                stroke-width: 42;
+            }
+        }
+
+        .section-logo-wrapper {
+            opacity: 0;
+            position: absolute;
+            top: 79.77%;
+            left: 14.52%;
+            width: 68.75%;
+
+            .logo-wrapper-bar {
+                display: block;
+                width: 100%;
+            }
+
+            .logo-wrapper-bar:first-of-type {
+                transform: translateY(800%) scaleX(0);
+                //animation: 0.45s cubic-bezier(0.62, -0.01, 0.32, 0.99) 1.5s 1 normal forwards running logo_wrapper_bar_11, 0.32s cubic-bezier(0, -0.01, 0.32, 0.99) 1.9s 1 normal forwards running logo_wrapper_bar_12;
+            }
+
+            .logo-wrapper {
+                //animation: 0.32s cubic-bezier(0, -0.01, 0.32, 0.99) 1.9s 1 normal both running logo_wrapper_animation;
+                display: block;
+                width: 100%;
+            }
+
+            .logo-wrapper-bar:last-of-type {
+                transform: translateY(-800%) scaleX(0);
+                //animation: 0.45s cubic-bezier(0.62, -0.01, 0.32, 0.99) 1.5s 1 normal forwards running logo_wrapper_bar_21, 0.32s cubic-bezier(0, -0.01, 0.32, 0.99) 1.9s 1 normal forwards running logo_wrapper_bar_22;
+            }
+        }
+
+        .section-logo-wrapper-title {
+            //animation: 1.2s cubic-bezier(0, 0, 0.31, 1.01) 0.6s 1 normal forwards running logo_wrapper_title_animation;
+            opacity: 0;
+            font-size: 42px;
+            line-height: 1;
+            font-weight: bold;
+        }
+
+        .section-logo-wrapper-description {
+            //animation: 1.2s cubic-bezier(0, 0, 0.31, 1.01) 0.7s 1 normal forwards running logo_wrapper_des_animation;
+            opacity: 0;
+            font-size: 24px;
+            line-height: 40px;
+            white-space: pre-line;
+            margin: 22px 24px 0px;
+        }
+    }
+}
+
+.section-animations {
+    .section-about-inner {
+
+        .section-logo {
+            .section-logo-decoration {
+                opacity: 1;
+                animation: 0.55s ease-out 1.9s 1 normal both running decoration_animation;
+            }
+        }
+
+        .section-logo-utib {
+            opacity: 1;
+        }
+
+        .section-logo-utib::after {
+            opacity: 1;
+            animation: 0.72s cubic-bezier(0, -0.01, 0.32, 0.99) 0.2s 1 normal both running logo_utib_animation;
+        }
+
+        .section-logo-number-svg {
+
+            .section-logo-number-polyline {
+                opacity: 1;
+                animation: 0.8s cubic-bezier(0.62, -0.01, 0.32, 0.99) 0.6s 1 normal both running logo_number_polyline;
+
+            }
+        }
+
+        .section-logo-th {
+
+            .section-logo-th-polyline:nth-of-type(1) {
+                opacity: 1;
+                animation: 0.3s cubic-bezier(0, -0.01, 0.32, 0.99) 1s 1 normal both running logo_th_animation_1;
+            }
+
+            .section-logo-th-polyline:nth-of-type(2) {
+                opacity: 1;
+                animation: 0.3s cubic-bezier(0, -0.01, 0.32, 0.99) 1.1s 1 normal both running logo_th_animation_2;
+            }
+
+            .section-logo-th-polyline:nth-of-type(3) {
+                opacity: 1;
+                animation: 0.45s cubic-bezier(0, -0.01, 0.32, 0.99) 1.3s 1 normal both running logo_th_animation_3;
+            }
+        }
+
+        .section-logo-wrapper {
+            opacity: 1;
+
+            .logo-wrapper-bar:first-of-type {
+                animation: 0.45s cubic-bezier(0.62, -0.01, 0.32, 0.99) 1.5s 1 normal forwards running logo_wrapper_bar_11, 0.32s cubic-bezier(0, -0.01, 0.32, 0.99) 1.9s 1 normal forwards running logo_wrapper_bar_12;
+            }
+
+            .logo-wrapper {
+                animation: 0.32s cubic-bezier(0, -0.01, 0.32, 0.99) 1.9s 1 normal both running logo_wrapper_animation;
+            }
+
+            .logo-wrapper-bar:last-of-type {
+                animation: 0.45s cubic-bezier(0.62, -0.01, 0.32, 0.99) 1.5s 1 normal forwards running logo_wrapper_bar_21, 0.32s cubic-bezier(0, -0.01, 0.32, 0.99) 1.9s 1 normal forwards running logo_wrapper_bar_22;
+            }
+        }
+
+        .section-logo-wrapper-title {
+            animation: 1.2s cubic-bezier(0, 0, 0.31, 1.01) 0.6s 1 normal forwards running logo_wrapper_title_animation;
+        }
+
+        .section-logo-wrapper-description {
+            animation: 1.2s cubic-bezier(0, 0, 0.31, 1.01) 0.7s 1 normal forwards running logo_wrapper_des_animation;
+        }
+    }
+}
+
+@import url('./second-section-sp.component.scss');
+
+@keyframes scroll_animation {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes decoration_animation {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes logo_utib_animation {
+    0% {
+        transform: translateX(0%) skewX(-24deg);
+    }
+
+    100% {
+        transform: translateX(110%) skewX(-24deg);
+    }
+}
+
+@keyframes logo_number_polyline {
+    0% {
+        opacity: 0;
+        stroke-dasharray: 0, 1585;
+    }
+
+    100% {
+        stroke-dasharray: 1585, 1585;
+        opacity: 1;
+    }
+}
+
+@keyframes logo_th_animation_1 {
+    0% {
+        opacity: 0;
+        stroke-dasharray: 0, 39.224;
+    }
+
+    100% {
+        opacity: 1;
+        stroke-dasharray: 39.224, 39.224;
+    }
+}
+
+@keyframes logo_th_animation_2 {
+    0% {
+        opacity: 0;
+        stroke-dasharray: 0, 214.251;
+    }
+
+    100% {
+        opacity: 1;
+        stroke-dasharray: 214.251, 214.251;
+    }
+}
+
+@keyframes logo_th_animation_3 {
+    0% {
+        opacity: 0;
+        stroke-dasharray: 0, 502.082;
+    }
+
+    100% {
+        opacity: 1;
+        stroke-dasharray: 502.082, 502.082;
+    }
+}
+
+@keyframes logo_wrapper_bar_11 {
+    0% {
+        transform: translateY(800%) scaleX(0);
+    }
+
+    100% {
+        transform: translateY(800%) scaleX(1);
+    }
+}
+
+@keyframes logo_wrapper_bar_12 {
+    0% {
+        transform: translateY(800%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes logo_wrapper_animation {
+    0% {
+        clip-path: polygon(0px 50%, 100% 50%, 100% 50%, 0px 50%);
+    }
+
+    100% {
+        clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);
+    }
+}
+
+@keyframes logo_wrapper_bar_21 {
+    0% {
+        transform: translateY(-800%) scaleX(0);
+    }
+
+    100% {
+        transform: translateY(-800%) scaleX(1);
+    }
+}
+
+@keyframes logo_wrapper_bar_22 {
+    0% {
+        transform: translateY(-800%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes logo_wrapper_title_animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logo_wrapper_des_animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

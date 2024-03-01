@@ -1,0 +1,172 @@
+.section-message {
+    position: relative;
+
+    .message-bg-pc {
+        display: block;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        width: 2100px;
+        transform: translate(-50%, -50%);
+    }
+
+    .message-bg-sp {
+        display: none;
+    }
+
+    .message-cat {
+        display: grid;
+        -webkit-box-pack: end;
+        justify-content: end;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        width: 1480px;
+        transform: translate(-50%, -40%);
+
+        img {
+            display: block;
+            width: 320px;
+            //
+            opacity: 0;
+            //animation: 2s ease-in-out 0s infinite normal none running mess_cat_animation;
+        }
+    }
+
+    .mess-inner {
+        position: relative;
+        padding: 180px 24px calc(236.775px);
+
+        .mess-text {
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 2.4;
+            text-align: center;
+            color: rgb(0, 150, 250);
+            white-space: pre-line;
+
+            p {
+                //animation: 1s ease-out 0s 1 normal forwards running mess_text_p_animation;
+                opacity: 0;
+            }
+
+            p:nth-of-type(1) {
+                animation-delay: 0.2s;
+            }
+
+            p:nth-of-type(2) {
+                animation-delay: 0.5s;
+            }
+
+            p:nth-of-type(3) {
+                animation-delay: 0.8s;
+            }
+        }
+
+        .mess-share {
+            //animation: 0.62s cubic-bezier(0, 0, 0.31, 1.01) 0.2s 1 normal forwards running mess_share_animation;
+            position: relative;
+            display: grid;
+            justify-items: center;
+            margin-top: 142px;
+            opacity: 0;
+
+            .share-text {
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                font-size: 24px;
+                font-weight: bold;
+                color: rgb(0, 150, 250);
+                transform: translate(-50%, -50%);
+            }
+
+            .icon-wrapper {
+                display: grid;
+                gap: 16px;
+                grid-template-columns: repeat(2, auto);
+                padding: 14px 66px;
+                background-image: radial-gradient(rgb(255, 235, 8) 22%, transparent 22%), radial-gradient(rgb(255, 235, 8) 22%, transparent 22%);
+                background-size: 20px 20px;
+                border-radius: 100px;
+
+                .share-icon {
+                    display: block;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background: center center / contain no-repeat;
+                    transition: transform 0.16s ease-out 0s;
+                    cursor: pointer;
+                }
+
+                .share-icon:first-of-type {
+                    background-image: url('/assets/static/images/logo/twitter.svg');
+                }
+
+                .share-icon:last-of-type {
+                    background-image: url('/assets/static/images/logo/facebook.svg');
+                }
+            }
+        }
+    }
+}
+
+.section-animations {
+    .message-cat {
+        img {
+            opacity: 1;
+            transition: opacity 1s;
+            animation: 2s ease-in-out 0s infinite normal none running mess_cat_animation;
+        }
+    }
+
+    .mess-inner {
+        .mess-text {
+            p {
+                animation: 1s ease-out 0s 1 normal forwards running mess_text_p_animation;
+            }
+        }
+
+        .mess-share {
+            animation: 0.62s cubic-bezier(0, 0, 0.31, 1.01) 0.2s 1 normal forwards running mess_share_animation;
+        }
+    }
+}
+
+@import url('./seventh-section-sp.component.scss');
+
+@keyframes mess_cat_animation {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+
+    50% {
+        transform: translateY(4%);
+    }
+}
+
+@keyframes mess_text_p_animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes mess_share_animation {
+    0% {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

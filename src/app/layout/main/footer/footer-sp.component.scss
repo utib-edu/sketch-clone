@@ -1,0 +1,22 @@
+@media (max-width: calc(740px)) {
+    #footer {
+
+        #footer-body {
+            flex-direction: column !important;
+            -webkit-box-pack: center !important;
+            justify-content: center !important;
+            font-size: 0.7em !important;
+
+            .footer-body-menu {
+                -webkit-box-pack: center !important;
+                justify-content: center !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+        }
+
+        #footer-info {
+            display: none !important;
+        }
+    }
+}

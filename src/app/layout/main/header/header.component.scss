@@ -1,0 +1,162 @@
+#header {
+    position: relative;
+    z-index: 10;
+    margin-top: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: margin-top 0.24s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+    #header-body {
+        z-index: 30;
+        height: calc(80px);
+        position: relative;
+
+        a {
+            pointer-events: auto;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            margin: auto;
+            overflow: hidden;
+            width: calc(128px);
+            height: 100%;
+            color: rgb(46, 151, 216);
+            text-decoration: none;
+
+            svg {
+                color: rgb(46, 151, 216);
+                width: calc(128px);
+                height: calc(128px);
+                fill: currentcolor;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    #header-fixed {
+        z-index: 2000;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+
+        .header-buttons {
+            display: block;
+            position: unset;
+            transform: translateZ(0px);
+            transition: top 0.24s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+            .header-buttons-left {
+                z-index: 5;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                padding: 20px;
+                text-align: left;
+            }
+
+            .header-buttons-right {
+                z-index: 10;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                padding: 20px;
+                text-align: right;
+            }
+
+            .header-button+.header-button {
+                margin-left: calc(10px);
+            }
+
+            .header-button {
+                display: inline-block;
+                transform: translateZ(0px);
+
+                a {
+                    color: rgb(46, 151, 216);
+                    text-decoration: none;
+                    pointer-events: auto !important;
+
+                    .button {
+                        width: calc(40px);
+                        height: calc(40px);
+                        text-align: center;
+                        padding: 0px;
+                        border-radius: calc(20px);
+                        color: rgb(255, 255, 255);
+                        background-color: rgb(46, 151, 216);
+                        box-shadow: rgb(46, 151, 216) 0px 0px 0px 1px;
+
+                        svg {
+                            margin: calc(8px);
+                            width: calc(24px);
+                            height: calc(24px);
+                            fill: currentcolor;
+                            vertical-align: middle;
+                            text-align: center;
+                        }
+                    }
+
+                    .h-button {
+                        box-sizing: border-box;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin: 0px;
+                        font-style: inherit;
+                        font-variant: inherit;
+                        font-stretch: inherit;
+                        font-size: inherit;
+                        line-height: inherit;
+                        font-family: inherit;
+                        font-optical-sizing: inherit;
+                        font-kerning: inherit;
+                        font-feature-settings: inherit;
+                        font-variation-settings: inherit;
+                        font-weight: bold;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        overflow: hidden;
+                        user-select: none;
+                        transition: transform 0.24s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s, background-color 0.24s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, color 0.24s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+                    }
+
+                    .hollow {
+                        background-color: rgb(255, 255, 255);
+                        color: rgb(46, 151, 216);
+                    }
+
+                    .narrow {
+                        width: auto;
+                        padding: 0px calc(10px);
+                    }
+
+                    .h-button:hover {
+                        transform: scale(1.12);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: calc(580px)) {
+    #header {
+        #header-body {
+            a {
+                svg {
+                    display: none;
+                }
+            }
+        }
+
+        #header-fixed {
+            z-index: 2000;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+        }
+    }
+}

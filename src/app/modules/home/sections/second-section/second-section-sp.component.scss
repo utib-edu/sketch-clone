@@ -1,0 +1,67 @@
+@media (max-width: 800px) {
+    .second-section {
+        .section-about-bg {
+            display: none !important;
+        }
+
+        .section-about-bg-sp {
+            display: block !important;
+        }
+
+        .section-about-scroll-icon {
+            display: none !important;
+        }
+
+        .section-about-ballon {
+            width: 140% !important;
+            transform: translate(-50%, -25%) !important;
+        }
+
+        .section-about-ballon::before {
+            background-image: url('/assets/static/images/about/ballon-sp.svg') !important;
+        }
+
+        .section-about-inner {
+            gap: 16px !important;
+            padding: 0px 0px 50px !important;
+
+            .section-logo {
+                display: none !important;
+            }
+
+            .section-logo-sp {
+                display: block !important;
+                position: relative;
+                width: 200px;
+
+                img {
+                    display: block;
+                    object-fit: contain;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .section-logo-sp::after {
+                content: "";
+                display: block;
+                padding-top: 100%;
+            }
+
+            .section-logo-wrapper-title {
+                font-size: 30px !important;
+                line-height: 40px !important;
+            }
+
+            .section-logo-wrapper-description {
+                font-size: 18px !important;
+                line-height: 34px !important;
+                font-weight: bold !important;
+                margin: 0px 46px !important;
+            }
+        }
+    }
+}

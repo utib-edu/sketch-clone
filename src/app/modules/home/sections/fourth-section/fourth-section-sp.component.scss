@@ -1,0 +1,52 @@
+@media (max-width: 800px) {
+    .section-feature {
+        .feature-inner {
+            gap: 40px !important;
+            padding: 10px 0px 40px !important;
+
+            .title-pc {
+                display: none !important;
+            }
+
+            .title-sp {
+                display: block !important;
+            }
+
+            .panel-wrapper {
+                gap: 32px !important;
+
+                .panel {
+                    max-width: 480px !important;
+
+                    .panel-inner {
+                        grid-template-columns: none !important;
+                        gap: 16px !important;
+                        padding: 25px 25px 45px !important;
+
+                        .panel-info {
+                            .info-title {
+                                font-size: 22px !important;
+
+                                span {
+                                    font-size: 14px !important;
+                                }
+                            }
+
+                            .panel-des {
+                                font-size: 16px !important;
+                                line-height: 32px !important;
+                            }
+                        }
+                    }
+                }
+
+                .panel::before {
+                    top: 8px !important;
+                    left: 8px !important;
+                    width: calc(100% - 16px) !important;
+                    height: calc(100% - 16px) !important;
+                }
+            }
+        }
+    }
+}

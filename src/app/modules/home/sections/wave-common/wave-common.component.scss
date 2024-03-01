@@ -1,0 +1,132 @@
+.section-wave {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: calc(399.135px);
+    pointer-events: none;
+
+    .wave {
+        animation: 8.6s linear 0s infinite normal none running section_wave;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        min-width: calc(3300px);
+        width: 200%;
+        height: 100%;
+        background: left top / 1650px repeat-x;
+    }
+
+    .first-wave {
+        background-image: url('/assets/static/images/wave/wave-green.png') !important;
+    }
+
+    .second-wave {
+        top: calc(20.295px);
+        background-image: url('/assets/static/images/wave/wave-red.png') !important;
+    }
+
+    .third-wave {
+        top: calc(40.59px);
+        background-image: url('/assets/static/images/wave/wave-blue.png') !important;
+    }
+
+    .fourth-wave {
+        top: calc(60.885px);
+        background-image: url('/assets/static/images/wave/wave-white.png') !important;
+    }
+
+    .footer-wave {
+        top: calc(60.885px);
+        background-image: url('/assets/static/images/wave/wave-sketch-blue.png') !important;
+    }
+
+    .wave-dog {
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        width: 1380px;
+        transform: translate(-50%, -50%);
+
+        img {
+            display: block;
+            width: 416px;
+            transform-origin: center bottom;
+            animation: 2s ease-in-out 0s infinite normal none running wave_dog_animation;
+        }
+    }
+}
+
+.section-wave:nth-of-type(1) {
+    top: 0px;
+    transform: translateY(-55%);
+}
+
+.section-wave:nth-of-type(2) {
+    bottom: 0px;
+    transform: translateY(55%) rotate(0.5turn);
+}
+
+@media (max-width: 800px) {
+
+    .section-wave {
+        height: calc(91.512px);
+
+        .wave {
+            animation-name: wave_mobile_animation !important;
+            min-width: calc(720px) !important;
+            background-size: 360px !important;
+        }
+
+        .second-wave {
+            top: calc(5.904px);
+        }
+
+        .third-wave {
+            top: calc(11.808px);
+        }
+
+        .fourth-wave {
+            top: calc(17.712px);
+        }
+
+        .wave-dog {
+            width: calc(100% + 40px) !important;
+
+            img {
+                width: 136px !important;
+            }
+        }
+    }
+}
+
+@keyframes section_wave {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-1650px);
+    }
+}
+
+@keyframes wave_mobile_animation {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-360px);
+    }
+}
+
+@keyframes wave_dog_animation {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-4deg);
+    }
+}

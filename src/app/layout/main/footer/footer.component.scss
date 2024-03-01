@@ -1,0 +1,89 @@
+#footer {
+    width: 100%;
+    height: calc(60px);
+
+    #footer-body {
+        z-index: 30;
+        position: relative;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        height: calc(60px);
+        color: rgb(249, 245, 239);
+        background-color: rgb(55, 63, 81);
+        text-align: center;
+        transition: transform 0.24s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+        ul {
+            list-style: none;
+        }
+
+        .footer-body-menu {
+            padding: 0px 20px;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            li {
+                padding-left: calc(10px);
+
+                .menu {
+                    display: block;
+                    color: rgb(249, 245, 239);
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    #footer-info {
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        transition: opacity 0.24s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, visibility 0.24s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, transform 0.24s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+        .button {
+            width: calc(40px);
+            height: calc(40px);
+            box-shadow: none;
+            padding: 0px;
+            border-radius: calc(20px);
+            color: rgb(255, 255, 255);
+            background-color: rgb(55, 63, 81);
+            box-sizing: border-box;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0px;
+            font-style: inherit;
+            font-variant: inherit;
+            font-stretch: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            font-family: inherit;
+            font-optical-sizing: inherit;
+            font-kerning: inherit;
+            font-feature-settings: inherit;
+            font-variation-settings: inherit;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            overflow: hidden;
+            user-select: none;
+            transition: transform 0.24s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s, background-color 0.24s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, color 0.24s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+            .info {
+                width: calc(24px);
+                height: calc(24px);
+            }
+        }
+    }
+}
+
+@import url(./footer-sp.component.scss);

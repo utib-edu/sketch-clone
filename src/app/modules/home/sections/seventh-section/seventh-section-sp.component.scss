@@ -1,0 +1,34 @@
+@media (max-width: 800px) {
+    .message-bg-pc {
+        display: none !important;
+    }
+
+    .message-bg-sp {
+        display: block !important;
+        position: absolute;
+        top: 30%;
+        left: 55%;
+        width: 130%;
+        transform: translate(-50%, -50%);
+    }
+
+    .message-cat {
+        width: 120% !important;
+
+        img {
+            width: 104px !important;
+        }
+    }
+
+    .mess-inner {
+        padding: 48px 24px calc(97.8px) !important;
+
+        .mess-text {
+            font-size: 18px !important;
+        }
+
+        .mess-share {
+            margin-top: 94px !important;
+        }
+    }
+}

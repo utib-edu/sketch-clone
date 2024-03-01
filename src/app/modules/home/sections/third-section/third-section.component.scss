@@ -1,0 +1,128 @@
+.section-utib-numbers {
+    display: grid;
+    gap: 154px;
+    justify-items: center;
+    padding: calc(398.25px) 0px calc(518.25px);
+    font-weight: bold;
+    text-align: center;
+    background: url('/assets/static/images/counters/bg.jpg') center center / cover no-repeat;
+
+    .section-numbers-panel-wrapper {
+        max-width: 1515px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        display: grid;
+        width: calc(100% - 48px);
+        padding: 0px 24px;
+
+        .number-panel {
+            //animation: 0.62s cubic-bezier(0, 0, 0.31, 1.01) 0.2s 1 normal forwards running number_panel_animation;
+            box-sizing: border-box;
+            position: relative;
+            width: 100%;
+            padding: 84px 24px;
+            background: url('/assets/static/images/pattern/2.png') center center / cover no-repeat;
+            border-radius: 40px;
+            opacity: 0;
+
+            .number-panel-inner {
+                position: relative;
+                display: grid;
+                gap: 24px;
+                justify-items: center;
+
+                .panel-name {
+                    color: rgb(0, 150, 250);
+                    font-size: 28px;
+                    line-height: 40px;
+                }
+
+                .panel-thumb {
+                    background: url('/assets/static/images/counters/user.png') center center / contain no-repeat;
+                    width: 57%;
+                }
+
+                .panel-thumb::before {
+                    content: "";
+                    display: block;
+                    padding-top: 67%;
+                }
+
+                .panel-counter {
+                    color: rgb(0, 150, 250);
+                    font-size: 48px;
+                    line-height: 1;
+                    word-break: break-all;
+
+                    span {
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+
+        .number-panel:nth-of-type(2) {
+            animation-delay: 0.3s;
+            background-image: url('/assets/static/images/pattern/1.png') !important;
+
+            .number-panel-inner {
+
+                .panel-name,
+                .panel-counter {
+                    color: rgb(52, 153, 151);
+                }
+
+                .panel-thumb {
+                    background: url('/assets/static/images/counters/illust.png') center center / 80% no-repeat !important;
+                }
+            }
+        }
+
+        .number-panel:nth-of-type(3) {
+            animation-delay: 0.4s;
+
+            .number-panel-inner {
+
+                .panel-name,
+                .panel-counter {color: rgb(236, 26, 87);
+                }
+
+                .panel-thumb {
+                    background: url('/assets/static/images/counters/like.png') center center / contain no-repeat !important;
+                }
+            }
+        }
+
+        .number-panel::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: calc(100% - 24px);
+            height: calc(100% - 24px);
+            background-color: rgb(255, 255, 255);
+            border-radius: 33px;
+        }
+    }
+}
+
+.section-animation {
+    .number-panel {
+        animation: 0.62s cubic-bezier(0, 0, 0.31, 1.01) 0.2s 1 normal forwards running number_panel_animation;
+    }
+}
+
+@import url(./third-section-sp.component.scss);
+
+@keyframes number_panel_animation {
+    0% {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
